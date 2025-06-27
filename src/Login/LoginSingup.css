@@ -1,97 +1,51 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 200px;
-    width: 600px;
-    background: #fff;
-    padding-bottom: 30px;
-   }
-
+  @apply flex flex-col mx-auto mt-20 md:mt-32 w-full max-w-[600px] bg-white p-6 md:p-8 rounded-2xl shadow-lg;
+}
 
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 9px;
-    width: 100%;
-    margin-top: 30px;
-   }
-
-.text{
-    color: rgb(62, 19, 233);
-    font-size: 48px;
-    font-weight: 700;
+  @apply flex flex-col items-center gap-2 mt-8;
 }
 
-.underline{
-    width: 61px;
-    height: 6px;
-    background: #3229ed;
-    border-radius: 9px;
+.text {
+  @apply text-4xl md:text-5xl font-bold text-indigo-600;
 }
 
-.inputs{
-    margin-top: 55px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    align-items: center;
+.underline {
+  @apply w-28 h-1.5 bg-indigo-400 rounded-full mt-1;
 }
 
-.input{
-    display:  flex;
-    align-items: center;
-    margin: auto;
-    width: 480px;
-    height: 80px;
-    background: #d7d1e2;
-    border-radius: 6px;  
+.inputs {
+  @apply mt-12 flex flex-col gap-6 items-center;
 }
 
-.inputs img{
-    margin:0px 30px ;
+.input {
+  @apply flex items-center mx-auto w-full max-w-[480px] h-16 bg-gray-100 rounded-lg;
+}
+
+.inputs img {
+  @apply mx-4 h-8 w-7;
 }
 
 .inputs input {
-    height:  50px;
-    width: 400px;
-    background:  transparent;
-    border: none;
-    outline: none;
-    color: #110101;
-    font-size: 19px;
+  @apply h-12 w-full max-w-[400px] bg-transparent border-none outline-none text-gray-900 text-lg placeholder-gray-500;
 }
 
-.forgot-password{
-    padding-left:  62px;
-    margin-top: 27px;
-    color: #797979;
-    font-size: 18px;
+.forgot-password {
+  @apply mt-6 text-gray-600 text-base font-medium text-center;
 }
 
-.forgot-password span{
-    color: #4c00b4;
-    cursor: pointer;
+.forgot-password span {
+  @apply text-indigo-700 cursor-pointer hover:underline;
 }
 
-.sumit-container{
-    display:  flex;
-    gap: 30px;
-    margin: 60px auto;  
+.submit-container {
+  @apply flex gap-6 mx-auto mt-12 justify-center items-center w-full max-w-[480px];
 }
 
-.sumit{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 220px;
-  height: 59px;
-  color: #fff;
-  background: #4c00b4;
-  border-radius: 50px;
-  font-size: 19px;
-  font-weight: 700;
-  cursor: pointer;
+.submit {
+  @apply flex justify-center items-center w-44 h-14 text-white bg-indigo-600 rounded-full text-lg font-bold cursor-pointer transition-all duration-300 hover:bg-indigo-700;
 }
 
+.gray {
+  @apply bg-gray-400 hover:bg-gray-500;
+}
